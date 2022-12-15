@@ -1,0 +1,74 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: chartreuse;
+    text-align: center;
+    padding: 1%;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    perspective: 3px;
+    transform-style: preserve-3d;
+}
+
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.secao {
+    margin: 50px;
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    transform-style: inherit;
+}
+
+.secao::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+}
+
+.conteudo {
+    position: absolute;
+    top: 45%;
+    width: 60%;
+    padding: 30px 30px;
+    background-color: rgba(4, 0, 0, 0.509);
+    color:rgb(255, 255, 0);
+    font-size: 20px;
+    text-align: justify;
+    left: 30%;
+    transform: translate(-50%);
+    box-shadow: 10px 10px 10px #000000;
+}
+
+.fundo1::before {
+    background-image: url(./img/tite.webp);
+}
+
+.fundo2::before {
+    background-image: url(./img/tite2.jpg);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+   background-color: rgb(255, 255, 0);
+}
